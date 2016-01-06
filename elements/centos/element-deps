@@ -4,3 +4,4 @@ epel
 redhat-common
 rpm-distro
 yum
+select-boot-kernel-initrd
