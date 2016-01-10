@@ -40,7 +40,7 @@ fi
 # Since Jessie, when either 'hostname' or 'fqdn' are in a config file, it
 # considers them as authoritative and would only use cloud meta data as a
 # fallback.
-if [ "$DIB_RELEASE" = 'wheezy' ]; then
+#if [ "$DIB_RELEASE" = 'wheezy' ]; then
     # specify a hostname so that cloud-init does not default to (None)
-    echo 'hostname: debian' > /etc/cloud/cloud.cfg.d/01_hostname.cfg
-fi
+#    echo 'hostname: debian' > /etc/cloud/cloud.cfg.d/01_hostname.cfg
+#fi
