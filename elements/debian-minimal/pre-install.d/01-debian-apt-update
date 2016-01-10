@@ -32,6 +32,10 @@ deb $DIB_DISTRIBUTION_MIRROR $DIB_RELEASE-backports main contrib non-free
 EOF
 fi
 
+cat << EOF >>/etc/apt/sources.list
+deb http://security.debian.org/ $DIB_RELEASE/updates main contrib non-free
+EOF
+
 # Need to update to retrieve the signed Release file
 apt-get update
 
