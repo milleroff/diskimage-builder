@@ -42,6 +42,11 @@ else
 fi
 KERNEL_PACKAGE="linux-image-$KERNEL"
 
+# There is no package linux-image-686 in Debian Jessie
+if [ $DIB_RELEASE = 'jessie' ] && [ $ARCH = 'i386' ] ; then
+    KERNEL_PACKAGE="$KERNEL_PACKAGE-pae"
+fi
+
 DIB_DEBIAN_COMPONENTS=${DIB_DEBIAN_COMPONENTS:-main}
 DIB_DEBOOTSTRAP_EXTRA_ARGS=${DIB_DEBOOTSTRAP_EXTRA_ARGS:-}
 DEBOOTSTRAP_TARBALL=$DIB_IMAGE_CACHE/debootstrap-${DISTRO_NAME}-${DIB_RELEASE}-${ARCH}-${KERNEL}.tar.gz
