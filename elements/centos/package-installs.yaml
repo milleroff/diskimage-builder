@@ -1,4 +1,5 @@
 parted:
+cloud-init:
 cloud-utils:
 cloud-utils-growpart:
 dracut-modules-growroot:

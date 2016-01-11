@@ -5,3 +5,5 @@ redhat-common
 rpm-distro
 yum
 select-boot-kernel-initrd
+cloud-init-datasources
+mivocloud-centos
